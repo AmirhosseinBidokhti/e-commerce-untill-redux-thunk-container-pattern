@@ -1,6 +1,7 @@
 body {
   font-family: "Open Sans Condensed", sans-serif;
   padding: 20px 60px;
+  box-sizing: border-box;
 }
 
 a,
@@ -8,4 +9,10 @@ a:active,
 a:visited {
   text-decoration: none;
   color: #000;
+}
+
+*::before,
+*::after,
+* {
+  box-sizing: inherit;
 }

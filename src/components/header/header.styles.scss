@@ -6,11 +6,12 @@
   //background-color: rebeccapurple;
   justify-content: space-between;
   align-items: center;
+  text-transform: uppercase;
   .logo-container {
     width: 70px;
-    padding: 25px;
-    height: 100%;
-    display: flex;
+    padding: 20px;
+    height: auto;
+    //display: flex;
     align-items: center;
   }
 
@@ -23,6 +24,7 @@
     justify-content: flex-end;
     .option {
       padding: 10px 15px;
+      cursor: pointer;
     }
   }
 }
