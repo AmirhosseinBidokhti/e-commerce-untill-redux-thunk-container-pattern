@@ -31,7 +31,7 @@ googleProvider.setCustomParameters({ prompt: "select_account" });
 
 //export const signInWithGoogle = firebase.auth().signInWithPopup(googleProvider);
 // instead
-export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
+export const signInWithGoogle = () => auth.signInWithRedirect(googleProvider);
 
 // now go to firebase panel and enable the google auth in sidebar we have.also select project support email
 // now we have oAuth enabled for our project

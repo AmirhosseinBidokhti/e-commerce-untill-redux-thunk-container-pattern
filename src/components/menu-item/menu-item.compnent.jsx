@@ -4,6 +4,9 @@ import PropTypes from "prop-types";
 
 import "./menu-item.styles.scss";
 
+// instead of (MenuItem = (props)) we destructured it
+// this.props used for class components
+
 const MenuItem = ({ title, imageUrl, size, history, match, linkUrl }) => (
   <div
     className={`${size} menu-item`}
