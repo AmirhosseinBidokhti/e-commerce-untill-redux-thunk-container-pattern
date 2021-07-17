@@ -39,5 +39,14 @@ export const selectCartItemsCount = createSelector(
       0
     )
 );
+export const selectCartItemsTotal = createSelector(
+  selectCartItems,
+  (cartItems) =>
+    cartItems.reduce(
+      (accQuantity, cartItem) =>
+        accQuantity + cartItem.quantity * cartItem.price,
+      0
+    )
+);
 
 // now pull that into the cartIcon and use it.

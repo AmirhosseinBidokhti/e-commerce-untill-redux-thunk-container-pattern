@@ -1,7 +1,7 @@
 import React from "react";
 
 import { toggleCartHidden } from "../../redux/cart/cart.actions";
-import { connect, useDispatch, useSelector } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
 import { selectCartItemsCount } from "../../redux/cart/cart.selectors";
