@@ -1,5 +1,5 @@
 .collection-item {
-  width: 22%;
+  width: 22vw; //22% means it applys to the width of container parent. but 22vw means the whole view of the browser
   display: flex;
   flex-direction: column;
   height: 350px;
