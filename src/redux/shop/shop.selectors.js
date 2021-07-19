@@ -17,10 +17,17 @@ export const selectShopCollections = createSelector(
 
 export const selectCollection = (collectionUrlParam) =>
   createSelector([selectShopCollections], (collections) => {
-    console.log(collections);
-    console.log(collections[collectionUrlParam]);
     return collections[collectionUrlParam];
   });
+
+export const selectCollectionsForPreview = createSelector(
+  [selectShopCollections],
+  (collections) => Object.keys(collections).map((key) => collections[key])
+);
+
+// object.key() => returns an array of keys of the object
+
+// const x = {a:1, b:2}; object.keys(x)=> ["a", "b"]
 
 // collections.find(
 //(collection) => collection.id === COLLECTION_ID_MAP[collectionUrlParam]
@@ -44,5 +51,15 @@ export const selectCollection = (collectionUrlParam) =>
       changing our SHOP_DATA from [] to {}
 
       NOTICE WE CAN USE IT IN OUR COMPONENTS AND RENDERING NO CHANGE NEEDED WITH THIS SYNTAX
+
+
+      This is the ideal way that we should be storing large arrays of elements when we need inidvidual
+      element inside of our reducer.
+
+      Pretty common thing we encounter when we talk about backend and databases.
+
+      We still have items and sections as arrays but since in our case we dont need to access individual item
+      inside of them (no search or stuffs) its okay.
+
 
 */
