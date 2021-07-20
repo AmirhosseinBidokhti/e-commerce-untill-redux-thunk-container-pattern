@@ -1,21 +1,12 @@
 import React from "react";
+import { CustomButtonContainer } from "./custom-button.styles";
 
 import "./custom-button.styles.scss";
 
-const CustomButton = ({
-  children,
-  isGoogleSignIn,
-  inverted,
-  ...otherProps
-}) => (
-  <button
-    className={`custom-button ${isGoogleSignIn ? "google-sign-in" : ""} ${
-      inverted ? "inverted" : ""
-    }`}
-    {...otherProps}
-  >
-    {children}
-  </button>
+// ...props, childeren will be an issue. since we should explictily destruct first if we want than using ...props
+
+const CustomButton = ({ children, ...props }) => (
+  <CustomButtonContainer {...props}>{children}</CustomButtonContainer>
 );
 
 export default CustomButton;
