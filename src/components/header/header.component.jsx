@@ -19,8 +19,6 @@ import {
   OptionLink,
 } from "./header.styles";
 
-import "./header.styles.scss";
-
 const Header = ({ hidden, currentUser }) => {
   // const currentUser = useSelector((state) => state.user.currentUser);
   // const { hidden } = useSelector((state) => state.cart);

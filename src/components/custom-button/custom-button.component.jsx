@@ -1,8 +1,6 @@
 import React from "react";
 import { CustomButtonContainer } from "./custom-button.styles";
 
-import "./custom-button.styles.scss";
-
 // ...props, childeren will be an issue. since we should explictily destruct first if we want than using ...props
 
 const CustomButton = ({ children, ...props }) => (
